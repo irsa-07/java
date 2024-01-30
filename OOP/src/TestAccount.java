@@ -1,4 +1,8 @@
-
+/**
+ * Klasa Account test perdoret per testuar clasen Acoount
+ * @author Ardi
+ *
+ */
 public class TestAccount {
 
 	public static void main(String[] args) {
