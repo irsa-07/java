@@ -11,7 +11,7 @@ public class TestPunonjes {
 		denisi.setZyra("Lab4");
 		denisi.setPaga(900000.0);
 		denisi.setDataPunesimit(new Data(12,1,2020));
-		denisi.getVitetePunesimit();	
+		denisi.rishikoPaga();
 	System.out.println(denisi);
 		
 
