@@ -27,10 +27,11 @@ public class Katrori extends Drejtkendeshi {
 	public void setBrinja1(double brinja1) {
 		this.brinja1 = brinja1;
 	}
-	
-	public double getPerimetrin() {
+	@Override
+	public double getPerimeterin() {
 		return 4*brinja1;
 	}
+	@Override
 	public double getSiperfaqen() {
 		return brinja1*brinja1;
 	}

@@ -19,7 +19,11 @@ public class Punonjes extends Person {
 		this.dataPunesimit = dataPunesimit;
 	}
 	/**
+	 * 
+	 * 
 	 * @return the zyra
+	 * 
+	 * 
 	 */
 	public String getZyra() {
 		return zyra;

@@ -16,13 +16,15 @@ public class Trekendesh extends ObjektGjeometrik {
 	 * @param brinja1
 	 * @param brinja2
 	 * @param brinja3
+	 * @throws IllegalArgumentException kur njera nga brinjet eshte negative.
 	 */
 
 	public Trekendesh(String ngjyra, boolean ngjyrosur, double brinja1, double brinja2, double brinja3) {
 		super(ngjyra, ngjyrosur);
 		System.out.println("Konstruktori me parametra i klases Trekendesh");
-
-		this.brinja1 = brinja1;
+		if (brinja1 <= 0 || brinja2 <= 0 || brinja3 <= 0)
+			throw new IllegalArgumentException("Njera nga brinjet eshte negative");
+			this.brinja1 = brinja1;
 		this.brinja2 = brinja2;
 		this.brinja3 = brinja3;
 	}
@@ -79,27 +81,29 @@ public class Trekendesh extends ObjektGjeometrik {
 	 * 
 	 * @return
 	 */
-	public double getPerimeter() {
+	@Override
+	public double getPerimeterin() {
 		return brinja1 + brinja2 + brinja3;
 
 	}
-	
+
 	/**
 	 * LLogarit siperfaqen e trekendeshit sipas formules se heronit
+	 * 
 	 * @return siperfaqen e trekendeshit
 	 * 
 	 */
+	@Override
 	public double getSiperfaqen() {
-		double hp = getPerimeter()/2.0;//halfperimeter
-		return Math.sqrt(hp*(hp-brinja1)*(hp-brinja2)*(hp-brinja3));	
+		double hp = getPerimeterin() / 2.0;// halfperimeter
+		return Math.sqrt(hp * (hp - brinja1) * (hp - brinja2) * (hp - brinja3));
 	}
 
 	@Override
 	public String toString() {
-		return   String.format("Trekendesh me brinje %.2f,%.2f,%.2f",
-				brinja1,brinja2,brinja3)+
-				super.toString();//si tip printi f,overwrite eshte per te na 
-		//treguar nese e kemi bere sakte nese e kemi mbivendosur sakte
+		return String.format("Trekendesh me brinje %.2f,%.2f,%.2f", brinja1, brinja2, brinja3) + super.toString();
+																																																				
+		// treguar nese e kemi bere sakte nese e kemi mbivendosur sakte
 	}
-	
+
 }

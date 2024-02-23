@@ -45,9 +45,11 @@ public class Drejtkendeshi extends ObjektGjeometrik {
 	 * Perimetri
 	 * 
 	 */
-	public double getPerimeter() {
+	@Override
+	public double getPerimeterin() {
 		return (brinja1+brinja2)*2;
 	}
+	@Override
 	public double getSiperfaqen() {
 		return brinja1*brinja2;
 	}

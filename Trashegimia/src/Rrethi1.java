@@ -45,11 +45,12 @@ public class Rrethi1 extends ObjektGjeometrik {
 	 * 
 	 *
 	 */
-	
-	public double getPerimeter() {
+	@Override
+	public double getPerimeterin() {
 		return Math.PI*2*rrezja;
 	}
 //siperfaqja
+	@Override
 	public double getSiperfaqen() {
 		return Math.PI*rrezja*rrezja;
 	}
